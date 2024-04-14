@@ -7,26 +7,19 @@
  * @value: value to search for
  * Return: index of value or -1 if not found
  */
+
+
 int linear_search(int *array, size_t size, int value)
 {
-    size_t inc;
+	size_t inc;
 
-    if (array == NULL)
-        return (-1);
-
-    for (inc = 0; inc < size; inc++)
-    {
-        printf("Value checked array[%ld] = [%d]\n", inc, array[inc]);
-        if (array[inc] == value)
-            return (inc);
-        if (array[inc] > value) // Additional check for sorted array
-        {
-            printf("Value %d is not present in array.\n", value);
-            return (-1);
-        }
-    }
-
-    printf("Value %d is not present in array.\n", value);
-    return (-1);
+	if (array == NULL)
+		return (-1);
+	for (inc = 0; inc < size; inc++)
+	{
+		printf("Value checked array[%ld] = [%d]\n", inc, array[inc]);
+		if (array[inc] == value)
+			return (inc);
+	}
+	return (-1);
 }
-
